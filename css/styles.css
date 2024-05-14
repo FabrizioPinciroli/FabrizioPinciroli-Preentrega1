@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #6d2c28;
+    padding: 20px;
+    background-color: #faf4f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #040404;
+}
+
+
+.nav-background {
+    background: url('../img/banner.jpg') no-repeat center center / cover;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: #451515;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background-color: #451515;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.producto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.22);
+}
+
+.producto h2 {
+    color: #8e231b;
+    padding: 20px 20px 10px;
+    background-color: #faf4f0;
+    margin: 0;
+}
+
+.producto p {
+    padding: 0 20px 10px;
+    color: #3a2a29;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto img:hover {
+    transform: scale(1.05);
+}
+
+.sucursales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.sucursal {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 80%;
+    cursor: pointer;
+}
+
+.sucursal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.22);
+}
+
+.sucursal h2 {
+    color: #8e231b;
+    padding: 20px 20px 10px;
+    background-color: #faf4f0;
+    margin: 0;
+}
+
+.sucursal p {
+    padding: 0 20px 10px;
+    color: #3a2a29;
+}
+
+.sucursal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sucursal img:hover {
+    transform: scale(1.05);
+}
+
+nav a {
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f4e1dc;
+}
+
+.redes-sociales {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-logo {
+    width: 40px;
+    margin: 0 10px;
+}
+
+.contacto-formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-enviar {
+    background-color: #540b0e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-enviar:hover {
+    background-color: #6d1517;
+}
+
+.sobre-nosotros {
+    padding: 20px;
+    text-align: left;
+    color: #6d2c28;
+}
+
+.sobre-nosotros h1 {
+    text-align: center;
+    color: #451515;
+}
+
+.sobre-nosotros p {
+    margin-top: 10px;
+}
