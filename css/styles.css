@@ -15,24 +15,20 @@ body {
     min-height: 100vh;
 }
 
-h2 {
-    color: #040404;
-}
-
-
-.nav-background {
+nav {
     background: url('../img/banner.jpg') no-repeat center center / cover;
-    width: 100%;
-    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    width: 100%;
 }
 
 nav ul li {
@@ -40,10 +36,36 @@ nav ul li {
 }
 
 nav a {
-    color: #451515;
+    color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f4e1dc;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
@@ -94,12 +116,12 @@ footer {
 }
 
 .producto img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05w);
 }
 
 .producto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 12px 24px rgba(70, 6, 6, 0.25), 0 8px 8px rgba(0, 0, 0, 0.22);
 }
 
 .producto h3,
@@ -111,10 +133,6 @@ footer {
     margin: 0;
 }
 
-.producto p {
-    padding: 0 20px 20px;
-    color: #3a2a29;
-}
 
 .sucursales {
     display: flex;
@@ -161,14 +179,6 @@ footer {
 
 .sucursal img:hover {
     transform: scale(1.05);
-}
-
-nav a {
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #f4e1dc;
 }
 
 .redes-sociales {
@@ -238,4 +248,31 @@ nav a:hover {
 
 .sobre-nosotros p {
     margin-top: 10px;
+}
+
+.content {
+    width: 100%;
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content h1 {
+    grid-column: 1 / -1;
+}
+
+.content p {
+    grid-column: 1 / -1;
+
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
