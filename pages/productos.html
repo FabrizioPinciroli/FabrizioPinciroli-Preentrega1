@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | La vinoteca</title>
+    <title>Productos | La Vinoteca</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -12,37 +12,36 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="../index.html">Tienda de Vinos</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Productos y Promociones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sucursales.html">Sucursales</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+            <div class="container">
+                <a class="navbar-brand mx-auto" href="../index.html">Tienda de Vinos</a>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </label>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos y Promociones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sucursales.html">Sucursales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <h1>Nuestros Productos</h1>
-        <section id="productos-destacados">
-            <h2>Productos Destacados</h2>
-            <div class="productos-contenedor">
+        <section id="productos-destacados" class="container">
+            <h1 class="text-center my-4">Nuestros Productos</h1>
+            <h2 class="text-center mb-4">Productos Destacados</h2>
+            <div class="productos-grid">
                 <div class="producto">
                     <img src="../img/prodcuto1.png" alt="producto1" class="producto-imagen">
                     <h3>Lote negro Malbec</h3>
@@ -54,72 +53,71 @@
                     <p>Precio: $3500</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/producto3.png" alt="producto3" class="producto-imagen">
+                    <img src="../img/producto5.png" alt="producto3" class="producto-imagen">
                     <h3>Vino Catena Malbec</h3>
                     <p>Precio: $4000</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/producto4.png" alt="producto4" class="producto-imagen">
+                    <img src="../img/producto10.png" alt="producto4" class="producto-imagen">
                     <h3>Vino Rutini + caja</h3>
                     <p>Precio: $9000</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/producto5.png" alt="producto5" class="producto-imagen">
+                    <img src="../img/producto6.png" alt="producto5" class="producto-imagen">
                     <h3>Vino Cordero piel de lobo</h3>
                     <p>Precio: $2900</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/producto6.png" alt="producto6" class="producto-imagen">
+                    <img src="../img/producto14.png" alt="producto6" class="producto-imagen">
                     <h3>Gin Bombay</h3>
                     <p>Precio: $20900</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/producto8.png" alt="producto7" class="producto-imagen">
+                    <img src="../img/producto3.png" alt="producto7" class="producto-imagen">
                     <h3>Whiskey Jack Daniel's</h3>
                     <p>Precio: $24500</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/producto10.png" alt="producto8" class="producto-imagen">
+                    <img src="../img/producto4.png" alt="producto8" class="producto-imagen">
                     <h3>Vino Perro callejero blend de tintas</h3>
                     <p>Precio: $5000</p>
                 </div>
             </div>
         </section>
-        <section id="promociones">
-            <h1>Promociones Actuales</h1>
-            <h2>Los mejores precios del país!</h2>
-            <div class="productos-contenedor">
+        <section id="promociones" class="container">
+            <h1 class="text-center my-4">Promociones Actuales</h1>
+            <h2 class="text-center mb-4">¡Los mejores precios del país!</h2>
+            <div class="productos-grid">
                 <div class="producto">
-                    <img src="../img/promo1.png" alt="promo1" class="producto-imagen">
-                    <h3>Achaval ferrer</h3>
+                    <img src="../img/producto8.png" alt="promo1" class="producto-imagen">
+                    <h3>Achaval Ferrer</h3>
                     <p>3 x $11000</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/promo2.png" alt="promo2" class="producto-imagen">
+                    <img src="../img/promo4.png" alt="promo2" class="producto-imagen">
                     <h3>GIN HEREDERO + 6 TONICAS</h3>
                     <p>Precio: $10000</p>
                 </div>
                 <div class="producto">
                     <img src="../img/promo3.png" alt="promo3" class="producto-imagen">
-                    <h3>Fernet Branca + 2 coca colas </h3>
+                    <h3>Fernet Branca + 2 coca colas</h3>
                     <p>Precio: $12000</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/promo4.png" alt="promo4" class="producto-imagen">
-                    <h3>Campari + 2 citric </h3>
+                    <img src="../img/promo5.png" alt="promo4" class="producto-imagen">
+                    <h3>Campari + 2 citric</h3>
                     <p>Precio: $10000</p>
                 </div>
                 <div class="producto">
-                    <img src="../img/promo5.png" alt="promo5" class="producto-imagen">
+                    <img src="../img/promo1.png" alt="promo5" class="producto-imagen">
                     <h3>Vinos seleccionados</h3>
                     <p>10% descuento</p>
                 </div>
+            </div>
         </section>
-
-
     </main>
     <footer>
-        <p>La vinoteca - todos los derechos reservados</p>
+        <p class="text-center">La Vinoteca - Todos los derechos reservados</p>
     </footer>
 </body>
 
