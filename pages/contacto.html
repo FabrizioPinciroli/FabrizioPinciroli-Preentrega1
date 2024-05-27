@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -37,38 +38,82 @@
             </div>
         </nav>
     </header>
+
     <main>
-        <h1>Contacto</h1>
-        <div class="redes-sociales">
-            <a href="https://instagram.com" target="_blank"><img src="../img/logo1.png" alt="Instagram"
-                    class="social-logo"></a>
-            <a href="https://whatsapp.com" target="_blank"><img src="../img/logo2.png" alt="WhatsApp"
-                    class="social-logo"></a>
-            <a href="https://facebook.com" target="_blank"><img src="../img/logo3.png" alt="Facebook"
-                    class="social-logo"></a>
-        </div>
-        <section class="contacto-formulario">
-            <h2>Envíanos un mensaje</h2>
-            <form action="submit_form.php" method="POST" class="formulario-contacto">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+        <section class="contacto">
+            <div class="container">
+                <h1 class="text-center mb-5">¡Contáctanos!</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contacto-info">
+                            <h2>Nuestra Ubicación</h2>
+                            <p>Visita nuestras sucursales:</p>
+                            <div class="sucursal">
+                                <a href="https://maps.google.com/?q=Latitud,Longitud" target="_blank"><img
+                                        src="../img/maps" alt="Sucursal 1" class="img-fluid"></a>
+                                <p class="text-center">Sucursal Buenos Aires</p>
+                            </div>
+                            <div class="sucursal">
+                                <a href="https://maps.google.com/?q=Latitud,Longitud" target="_blank"><img
+                                        src="../img/maps" alt="Sucursal 2" class="img-fluid"></a>
+                                <p class="text-center">Sucursal Rosario</p>
+                            </div>
+                            <div class="sucursal">
+                                <a href="https://maps.google.com/?q=Latitud,Longitud" target="_blank"><img
+                                        src="../img/maps" alt="Sucursal 3" class="img-fluid"></a>
+                                <p class="text-center">Sucursal Cordoba</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="submit_form.php" method="POST" class="contacto-formulario">
+                            <h2>Envíanos un Mensaje</h2>
+                            <div class="form-group">
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje:</label>
+                                <textarea id="message" name="message" rows="6" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-enviar btn-block">Enviar Mensaje</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+            </div>
+        </section>
+        <section class="redes-sociales">
+            <div class="container">
+                <h2 class="text-center mb-4">Encuéntranos también en:</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <a href="https://instagram.com" target="_blank"><img src="../img/logo1.png" alt="Instagram"
+                                class="social-logo"></a>
+                        <p class="mt-2">Instagram</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://whatsapp.com" target="_blank"><img src="../img/logo2.png" alt="WhatsApp"
+                                class="social-logo"></a>
+                        <p class="mt-2">WhatsApp</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://facebook.com" target="_blank"><img src="../img/logo3.png" alt="Facebook"
+                                class="social-logo"></a>
+                        <p class="mt-2">Facebook</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn-enviar">Enviar</button>
-            </form>
+            </div>
         </section>
     </main>
-    <footer>
+
+    <footer class="mt-5">
         <p class="text-center">La Vinoteca - Todos los derechos reservados</p>
     </footer>
+
 </body>
 
 </html>
