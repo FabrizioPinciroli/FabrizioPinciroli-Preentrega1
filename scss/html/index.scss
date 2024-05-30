@@ -1,0 +1,22 @@
+// Estilos para la sección de la cata de vinos
+.cata-section {
+    background-color: #f8f9fa;
+    padding: 50px;
+    border-radius: 10px;
+
+    h2 {
+        color: $color-principal;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $color-principal;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 50%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+}

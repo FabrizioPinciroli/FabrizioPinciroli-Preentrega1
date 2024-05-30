@@ -1,0 +1,8 @@
+// Mixins
+@mixin transition($property, $duration, $timing) {
+    transition: $property $duration $timing;
+}
+
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+}

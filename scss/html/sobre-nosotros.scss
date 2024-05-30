@@ -1,0 +1,44 @@
+// Estilos para la sección Sobre Nosotros
+.sobre-nosotros {
+    padding: 40px 20px;
+    background-color: $color-secundario;
+    color: $color-principal;
+
+    h1 {
+        text-align: center;
+        color: $accent-color;
+    }
+
+    h2 {
+        color: $color-principal;
+        margin-top: 20px;
+    }
+
+    p {
+        margin-top: 10px;
+        line-height: 1.8;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .col-md-6 {
+        flex: 1;
+        padding: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+}

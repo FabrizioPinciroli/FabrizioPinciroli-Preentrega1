@@ -1,0 +1,73 @@
+// Estilo de Formulario de Contacto
+.contacto-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid $color-principal;
+    border-radius: 8px;
+    padding: 20px;
+    @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+
+    .formulario-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            label {
+                margin-bottom: 5px;
+                color: $navbar-bg;
+                font-weight: bold;
+            }
+
+            input,
+            textarea {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                @include transition(border-color, 0.3s, ease);
+
+                &:focus {
+                    border-color: $navbar-bg;
+                }
+            }
+        }
+
+        button.btn-enviar {
+            background-color: $color-principal;
+            color: $color-principal;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            @include transition(background-color, 0.3s, ease);
+
+            &:hover {
+                background-color: $button-bg-hover;
+            }
+        }
+    }
+}
+
+
+// Estilo de Redes Sociales
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    .social-logo {
+        width: 70px;
+        height: 70px;
+    }
+}

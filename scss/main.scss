@@ -1,0 +1,258 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "html/index.scss";
+@import "html/contacto.scss";
+@import "html/sobre-nosotros.scss";
+
+// Reset y Estilos Básicos
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    line-height: 1.6;
+    color: $color-principal;
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// Estilo de Nav
+nav {
+    background: url('../img/banner.jpg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        width: 100%;
+
+        li {
+            margin: 0 20px;
+
+            a {
+                color: $navbar-bg;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                @include transition(color, 0.3s, ease-in-out);
+
+                &:hover {
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+}
+
+// Estilo de la Barra de Navegación
+.navbar {
+    background-color: $navbar-bg;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .navbar-brand {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+// Estilo del Contenido Principal
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+// Estilo del Botón Primario
+.btn-primary {
+    background-color: $button-bg;
+    border-color: $button-bg;
+    color: white;
+    @include transition(background-color, 0.3s, ease);
+    @include transition(border-color, 0.3s, ease);
+
+    &:hover {
+        background-color: $button-bg-hover;
+        border-color: $navbar-bg;
+        color: white;
+    }
+}
+
+// Estilo del Fondo Claro
+.bg-light {
+    background-color: $background-color;
+    color: $color-principal;
+}
+
+// Estilo de la Tarjeta del Producto
+.producto,
+.sucursal {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+    @include transition(transform, 0.3s, ease);
+    @include transition(box-shadow, 0.3s, ease);
+    padding: 20px;
+    text-align: center;
+
+    &:hover {
+        transform: translateY(-5px);
+        @include box-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
+    }
+
+    &-imagen,
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    h3,
+    h2 {
+        color: $navbar-bg;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $text-color;
+        margin-bottom: 15px;
+    }
+}
+
+
+// Estilo de la Grilla de Productos y Sucursales
+.productos-grid,
+.sucursales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.sucursal {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+// Estilo del Footer
+footer {
+    background-color: $footer-bg;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+// Media Queries
+@media (max-width: 1200px) {
+    .contacto-formulario {
+        width: 70%;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-formulario {
+        width: 90%;
+    }
+
+    .navbar-nav {
+        text-align: center;
+
+        .nav-item {
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .social-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contacto-formulario {
+        width: 100%;
+    }
+}
+
+// Estilo del menú desplegable
+#menu-toggle {
+    display: none;
+
+    &:checked+.navbar-toggler .navbar-toggler-icon {
+        background-color: $background-color;
+    }
+
+    &:checked~.navbar-collapse {
+        display: block;
+    }
+}
+
+.navbar-toggler {
+    cursor: pointer;
+    padding: 10px 15px;
+
+    .navbar-toggler-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #080808;
+        display: block;
+    }
+}
+
+.navbar-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $background-color;
+    padding: 10px;
+}
