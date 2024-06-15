@@ -17,56 +17,77 @@
   margin-bottom: 20px;
 }
 
-.contacto-formulario {
+.contacto .contacto-info .sucursal {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contacto .contacto-info .sucursal img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.contacto .contacto-info .sucursal p {
+  margin-top: 10px;
+  color: #3a2a29;
+}
+.contacto .contacto-formulario {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  max-width: 600px;
+  width: 60%;
+  max-width: 700px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #6d2c28;
   border-radius: 8px;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.contacto-formulario .formulario-contacto {
+.contacto .contacto-formulario h2 {
+  margin-bottom: 20px;
+  color: #451515;
+}
+.contacto .contacto-formulario .formulario-contacto {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;
 }
-.contacto-formulario .formulario-contacto .form-group {
+.contacto .contacto-formulario .formulario-contacto .form-group {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-.contacto-formulario .formulario-contacto .form-group label {
+.contacto .contacto-formulario .formulario-contacto .form-group label {
   margin-bottom: 5px;
   color: #451515;
   font-weight: bold;
 }
-.contacto-formulario .formulario-contacto .form-group input,
-.contacto-formulario .formulario-contacto .form-group textarea {
-  padding: 10px;
+.contacto .contacto-formulario .formulario-contacto .form-group input,
+.contacto .contacto-formulario .formulario-contacto .form-group textarea {
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: border-color 0.3s ease;
 }
-.contacto-formulario .formulario-contacto .form-group input:focus,
-.contacto-formulario .formulario-contacto .form-group textarea:focus {
+.contacto .contacto-formulario .formulario-contacto .form-group input:focus,
+.contacto .contacto-formulario .formulario-contacto .form-group textarea:focus {
   border-color: #451515;
 }
-.contacto-formulario .formulario-contacto button.btn-enviar {
-  background-color: #6d2c28;
-  color: #6d2c28;
-  padding: 10px 20px;
+.contacto .contacto-formulario .formulario-contacto button.btn-enviar {
+  background-color: #8e231b;
+  color: #fff;
+  padding: 12px 25px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.contacto-formulario .formulario-contacto button.btn-enviar:hover {
+.contacto .contacto-formulario .formulario-contacto button.btn-enviar:hover {
   background-color: #451515;
 }
 
@@ -118,6 +139,62 @@
   margin-bottom: 20px;
 }
 
+.producto {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #f4e1dc;
+}
+.producto-imagen,
+.producto img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+.producto h3,
+.producto h2 {
+  color: #451515;
+  margin-bottom: 10px;
+}
+.producto p {
+  color: #3a2a29;
+  margin-bottom: 15px;
+}
+.producto:hover .producto-imagen {
+  transform: scale(1.1);
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+#productos-destacados h1,
+#promociones h1 {
+  color: #451515;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+#productos-destacados h2,
+#promociones h2 {
+  color: #6d2c28;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -135,7 +212,7 @@ body {
 }
 
 nav {
-  background: url("../img/banner.jpg") no-repeat center center/cover;
+  background: url("../img/fafa.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,62 +285,6 @@ main {
   color: #6d2c28;
 }
 
-.producto,
-.sucursal {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  transition: box-shadow 0.3s ease;
-  padding: 20px;
-  text-align: center;
-}
-.producto:hover,
-.sucursal:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-.producto-imagen,
-.producto img,
-.sucursal-imagen,
-.sucursal img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-}
-.producto h3,
-.producto h2,
-.sucursal h3,
-.sucursal h2 {
-  color: #451515;
-  margin-bottom: 10px;
-}
-.producto p,
-.sucursal p {
-  color: #3a2a29;
-  margin-bottom: 15px;
-}
-
-.productos-grid,
-.sucursales-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
-}
-
-.sucursal {
-  width: fit-content;
-  margin: 0 auto;
-  text-align: center;
-}
-.sucursal img {
-  width: 250px;
-  height: auto;
-}
-
 footer {
   background-color: #571c1c;
   color: white;
@@ -272,6 +293,41 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.sucursales-section .sucursales-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sucursales-section .sucursales-grid .sucursal {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.sucursales-section .sucursales-grid .sucursal:hover {
+  transform: translateY(-5px);
+}
+.sucursales-section .sucursales-grid .sucursal h2 {
+  color: #6d2c28;
+  margin-bottom: 10px;
+}
+.sucursales-section .sucursales-grid .sucursal p {
+  color: #6d2c28;
+  margin-bottom: 10px;
+}
+.sucursales-section .sucursales-grid .sucursal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1200px) {

@@ -3,8 +3,8 @@
 @import "html/index.scss";
 @import "html/contacto.scss";
 @import "html/sobre-nosotros.scss";
+@import "html/productos.scss";
 
-// Reset y Estilos Básicos
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +21,8 @@ body {
     min-height: 100vh;
 }
 
-// Estilo de Nav
 nav {
-    background: url('../img/banner.jpg') no-repeat center center / cover;
+    background: url('../img/fafa.jpg') no-repeat center center / cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +56,6 @@ nav {
     }
 }
 
-// Estilo de la Barra de Navegación
 .navbar {
     background-color: $navbar-bg;
     border-bottom: 1px solid #ddd;
@@ -75,7 +73,6 @@ nav {
     }
 }
 
-// Estilo del Contenido Principal
 main {
     flex: 1;
     display: flex;
@@ -86,7 +83,6 @@ main {
     margin-top: 80px;
 }
 
-// Estilo del Botón Primario
 .btn-primary {
     background-color: $button-bg;
     border-color: $button-bg;
@@ -101,71 +97,11 @@ main {
     }
 }
 
-// Estilo del Fondo Claro
 .bg-light {
     background-color: $background-color;
     color: $color-principal;
 }
 
-// Estilo de la Tarjeta del Producto
-.producto,
-.sucursal {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
-    @include transition(transform, 0.3s, ease);
-    @include transition(box-shadow, 0.3s, ease);
-    padding: 20px;
-    text-align: center;
-
-    &:hover {
-        transform: translateY(-5px);
-        @include box-shadow(0 8px 15px rgba(0, 0, 0, 0.2));
-    }
-
-    &-imagen,
-    img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 15px;
-    }
-
-    h3,
-    h2 {
-        color: $navbar-bg;
-        margin-bottom: 10px;
-    }
-
-    p {
-        color: $text-color;
-        margin-bottom: 15px;
-    }
-}
-
-
-// Estilo de la Grilla de Productos y Sucursales
-.productos-grid,
-.sucursales-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-}
-
-.sucursal {
-    width: fit-content;
-    margin: 0 auto;
-    text-align: center;
-
-    img {
-        width: 250px;
-        height: auto;
-    }
-}
-
-// Estilo del Footer
 footer {
     background-color: $footer-bg;
     color: white;
@@ -176,7 +112,48 @@ footer {
     width: 100%;
 }
 
-// Media Queries
+.sucursales-section {
+    .sucursales-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .sucursal {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h2 {
+                color: $color-principal;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $color-principal;
+                margin-bottom: 10px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .contacto-formulario {
         width: 70%;
@@ -222,7 +199,6 @@ footer {
     }
 }
 
-// Estilo del menú desplegable
 #menu-toggle {
     display: none;
 
